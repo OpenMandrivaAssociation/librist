@@ -10,8 +10,6 @@ Group:		System/Libraries
 URL:		https://code.videolan.org/rist/librist
 Source0:	https://code.videolan.org/rist/librist/-/archive/v%{version}/librist-v%{version}.tar.gz
 BuildSystem:	meson
-%patchlist
-librist-vcs-fallback.patch
 # System cjson, lz4 and GnuTLS. Do not compile the bundled copies.
 BuildOption:	-Dbuiltin_cjson=false -Dbuiltin_lz4=false -Dbuiltin_mbedtls=false -Duse_mbedtls=false -Duse_gnutls=true -Dfallback_builtin=false -Dtest=false
 BuildRequires:	pkgconfig(libcjson)
@@ -20,6 +18,9 @@ BuildRequires:	pkgconfig(gnutls)
 BuildRequires:	pkgconfig(nettle)
 BuildRequires:	pkgconfig(hogweed)
 BuildRequires:	pkgconfig(gmp)
+
+%patchlist
+librist-vcs-fallback.patch
 
 %description
 libRIST implements the Video Services Forum TR-06 RIST protocol.
