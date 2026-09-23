@@ -52,9 +52,9 @@ Headers and pkg-config file for building against librist.
 %{_bindir}/ristsrppasswd
 
 %files -n %{libname}
-%{_libdir}/liblibrist.so.*
+%{_libdir}/librist.so.*
 
 %files -n %{devname}
 %{_includedir}/librist/
 %{_libdir}/pkgconfig/librist.pc
-%{_libdir}/liblibrist.so
+%{_libdir}/librist.so
