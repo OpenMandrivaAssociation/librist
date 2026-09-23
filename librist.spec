@@ -14,7 +14,7 @@ BuildSystem:	meson
 # the GnuTLS switch leaves HAVE_MBEDTLS and HAVE_NETTLE unset and the
 # SRP authenticator does not compile. c11 is required so glibc's
 # _Generic strchr macro is not a pedantic error under -std=c99.
-BuildOption:	-Dc_std=c11 -Dbuiltin_cjson=false -Dbuiltin_lz4=false -Dfallback_builtin=false -Dtest=false
+BuildOption:	-Dc_std=c11 -Dbuiltin_cjson=false -Dbuiltin_lz4=false -Dbuiltin_mbedtls=true -Dfallback_builtin=false -Dtest=false
 BuildRequires:	pkgconfig(libcjson)
 BuildRequires:	pkgconfig(liblz4)
 
